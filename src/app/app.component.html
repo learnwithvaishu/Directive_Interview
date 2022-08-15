@@ -1,0 +1,19 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+
+<div *ngFor="let col of colors">
+  <div [ngStyle]="{ 'background-color': col?.color ? col?.color : 'red' }">
+    {{ col.color }}
+  </div>
+</div>
+
+<div *ngFor="let col of colors">
+  <div
+    [ngClass]="{
+      'red-color': col?.color === 'red',
+      'red-color': col?.color === 'green'
+    }"
+  >
+    {{ col.color }}
+  </div>
+</div>
